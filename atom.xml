@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-08T02:13:30.000Z</updated>
+  <updated>2016-10-20T12:14:56.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,105 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数学公式测试</title>
-    <link href="http://yoursite.com/2016/10/20/Mathjax-examples/"/>
-    <id>http://yoursite.com/2016/10/20/Mathjax-examples/</id>
-    <published>2016-10-20T11:42:48.000Z</published>
-    <updated>2016-10-08T02:13:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>利用<strong>MathJax</strong>来渲染LaTeX数学公式.<br> <a id="more"></a></p>
-<h1 id="Maxwell-equations"><a href="#Maxwell-equations" class="headerlink" title="Maxwell equations"></a>Maxwell equations</h1><pre><code>$$
-\begin{eqnarray}
-\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
-\nabla\cdot\vec{B} &amp;=&amp; 0 \\
-\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \\
-\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}    +\epsilon_0\frac{\partial\vec{E}}{\partial t})\\
-\end{eqnarray}
-$$
-</code></pre><p>效果：</p>
-<p>$$<br>\begin{eqnarray}<br>\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \<br>\nabla\cdot\vec{B} &amp;=&amp; 0 \<br>\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \<br>\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}+\epsilon_0\frac{\partial\vec{E}}{\partial t})\<br>\end{eqnarray}<br>$$</p>
-<p>发现直接利用<font color="#DC143C"> \$\$..\$\$ </font>,<font color="#DC143C"> \\ </font>并不能分行。</p>
-<h1 id="Another-example"><a href="#Another-example" class="headerlink" title="Another example"></a>Another example</h1><pre><code>When \\( a \ne 0 \\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are:
-$$ 
-x = {-b \pm \sqrt{b^2-4ac} \over 2a} 
-$$
-</code></pre><p>效果：</p>
-<p>When \( a \ne 0 \), there are two solutions to \(ax^2 + bx + c = 0\) and they are:<br>$$<br>x = {-b \pm \sqrt{b^2-4ac} \over 2a}<br>$$</p>
-<h1 id="Hexo-MathJax插件"><a href="#Hexo-MathJax插件" class="headerlink" title="Hexo MathJax插件"></a>Hexo MathJax插件</h1><p>Hexo不支持数学公式，<a href="https://github.com/akfish" target="_blank" rel="external">akfish</a>开发了一个插件，实现：</p>
-<ul>
-<li>自动部署MathJax</li>
-<li>添加MathJax Tag</li>
-</ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>$ npm install hexo-math --save
-</code></pre><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>在blog文件夹中执行：</p>
-<pre><code>$ hexo math install
-</code></pre><p>在<font color="#DC143C">_config.yml</font>文件中添加： </p>
-<pre><code>math:
-  engine: &apos;mathjax&apos; # or &apos;katex&apos;
-  mathjax: 
-     src: custom_mathjax_source
-     config:
-      # MathJax config
-  katex:
-     css: custom_css_source
-     js: custom_js_source # not used    
-     config:
-     # KaTeX config
-</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>对于不含特殊符号的公式可以直接使用MathJax的inline math表达式；如果有特殊符号则需要人肉escape，如<font color="#DC143C"> \ </font>之类的特殊符号在LaTeX表达式中出现频率很高，这样很麻烦，使用tag能够省不少事。</p>
-<h3 id="Mathjax-Inline"><a href="#Mathjax-Inline" class="headerlink" title="Mathjax Inline:"></a>Mathjax Inline:</h3><pre><code>Simplie inline $a = b + c $.
-</code></pre><p>效果：</p>
-<p>Simplie inline $a = b + c $.</p>
-<h3 id="MathJax-Block"><a href="#MathJax-Block" class="headerlink" title="MathJax Block:"></a>MathJax Block:</h3><pre><code>$$\frac{\partial u}{\partial t}
-= h^2 \left( \frac{\partial^2 u}{\partial x^2} +
-\frac{\partial^2 u}{\partial y^2+
-\frac{\partial^2 u}{\partial z^2}\right)$$
-</code></pre><p>效果：</p>
-<p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
-<h3 id="Tag-inline"><a href="#Tag-inline" class="headerlink" title="Tag inline:"></a>Tag inline:</h3><pre><code>This equation {% math %}\cos 2\theta = \cos^2 \theta - \sin^2 \theta =  2 \cos^2 \theta - 1 {% endmath %} is inline.
-</code></pre><p>效果：</p>
-<p>This equation <span>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta =  2 \cos^2 \theta - 1$</span><!-- Has MathJax --> is inline.</p>
-<h3 id="Tag-Block"><a href="#Tag-Block" class="headerlink" title="Tag Block:"></a>Tag Block:</h3><pre><code>{% math %}
-    \begin{aligned}
-    \dot{x} & = \sigma(y-x) \\
-    \dot{y} & = \rho x - y - xz \\
-    \dot{z} & = -\beta z + xy
-    \end{aligned}
-    {% endmath %}
-</code></pre><p>效果：</p>
-<span>$$\begin{aligned}
-\dot{x} &amp; = \sigma(y-x) \\
-\dot{y} &amp; = \rho x - y - xz \\
-\dot{z} &amp; = -\beta z + xy
-\end{aligned}$$</span><!-- Has MathJax -->
-<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p><a href="https://github.com/akfish/hexo-math" target="_blank" rel="external">Github</a></p>
-<h2 id="Maxwell-equations-renew"><a href="#Maxwell-equations-renew" class="headerlink" title="Maxwell equations renew"></a>Maxwell equations renew</h2><span>$$\begin{eqnarray}
-\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
-\nabla\cdot\vec{B} &amp;=&amp; 0 \\
-\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \\
-\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}+\epsilon_0\frac{\partial\vec{E}}{\partial t})\\
-\end{eqnarray}$$</span><!-- Has MathJax -->]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;利用&lt;strong&gt;MathJax&lt;/strong&gt;来渲染LaTeX数学公式.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Mathematics and Natural Sciences" scheme="http://yoursite.com/categories/Mathematics-and-Natural-Sciences/"/>
-    
-    
-      <category term="MathJax" scheme="http://yoursite.com/tags/MathJax/"/>
-    
-      <category term="hexo-math" scheme="http://yoursite.com/tags/hexo-math/"/>
-    
-  </entry>
-  
-  <entry>
     <title>致我们终将远离的子女(翻译分享)</title>
-    <link href="http://yoursite.com/2016/10/20/children-independece/"/>
-    <id>http://yoursite.com/2016/10/20/children-independece/</id>
-    <published>2016-10-20T11:42:48.000Z</published>
-    <updated>2016-10-08T02:13:46.000Z</updated>
+    <link href="http://yoursite.com/2016/10/07/children-independece/"/>
+    <id>http://yoursite.com/2016/10/07/children-independece/</id>
+    <published>2016-10-06T16:00:00.000Z</published>
+    <updated>2016-10-20T12:14:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>很多父母都认为其实子女是自己的私有物，他们有权利干涉、甚至决定孩子的未来，但是他们不曾注意到，孩子其实是有自己的思想的，是有灵魂的，而他们也终有一天将离我们而远去…</p>
 <a id="more"></a>
@@ -190,6 +96,101 @@ $$
     
     
       <category term="blogs" scheme="http://yoursite.com/tags/blogs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数学公式测试</title>
+    <link href="http://yoursite.com/2016/10/06/Mathjax-examples/"/>
+    <id>http://yoursite.com/2016/10/06/Mathjax-examples/</id>
+    <published>2016-10-05T16:00:00.000Z</published>
+    <updated>2016-10-20T12:14:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用<strong>MathJax</strong>来渲染LaTeX数学公式.<br> <a id="more"></a></p>
+<h1 id="Maxwell-equations"><a href="#Maxwell-equations" class="headerlink" title="Maxwell equations"></a>Maxwell equations</h1><pre><code>$$
+\begin{eqnarray}
+\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
+\nabla\cdot\vec{B} &amp;=&amp; 0 \\
+\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \\
+\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}    +\epsilon_0\frac{\partial\vec{E}}{\partial t})\\
+\end{eqnarray}
+$$
+</code></pre><p>效果：</p>
+<p>$$<br>\begin{eqnarray}<br>\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \<br>\nabla\cdot\vec{B} &amp;=&amp; 0 \<br>\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \<br>\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}+\epsilon_0\frac{\partial\vec{E}}{\partial t})\<br>\end{eqnarray}<br>$$</p>
+<p>发现直接利用<font color="#DC143C"> \$\$..\$\$ </font>,<font color="#DC143C"> \\ </font>并不能分行。</p>
+<h1 id="Another-example"><a href="#Another-example" class="headerlink" title="Another example"></a>Another example</h1><pre><code>When \\( a \ne 0 \\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are:
+$$ 
+x = {-b \pm \sqrt{b^2-4ac} \over 2a} 
+$$
+</code></pre><p>效果：</p>
+<p>When \( a \ne 0 \), there are two solutions to \(ax^2 + bx + c = 0\) and they are:<br>$$<br>x = {-b \pm \sqrt{b^2-4ac} \over 2a}<br>$$</p>
+<h1 id="Hexo-MathJax插件"><a href="#Hexo-MathJax插件" class="headerlink" title="Hexo MathJax插件"></a>Hexo MathJax插件</h1><p>Hexo不支持数学公式，<a href="https://github.com/akfish" target="_blank" rel="external">akfish</a>开发了一个插件，实现：</p>
+<ul>
+<li>自动部署MathJax</li>
+<li>添加MathJax Tag</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>$ npm install hexo-math --save
+</code></pre><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>在blog文件夹中执行：</p>
+<pre><code>$ hexo math install
+</code></pre><p>在<font color="#DC143C">_config.yml</font>文件中添加： </p>
+<pre><code>math:
+  engine: &apos;mathjax&apos; # or &apos;katex&apos;
+  mathjax: 
+     src: custom_mathjax_source
+     config:
+      # MathJax config
+  katex:
+     css: custom_css_source
+     js: custom_js_source # not used    
+     config:
+     # KaTeX config
+</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>对于不含特殊符号的公式可以直接使用MathJax的inline math表达式；如果有特殊符号则需要人肉escape，如<font color="#DC143C"> \ </font>之类的特殊符号在LaTeX表达式中出现频率很高，这样很麻烦，使用tag能够省不少事。</p>
+<h3 id="Mathjax-Inline"><a href="#Mathjax-Inline" class="headerlink" title="Mathjax Inline:"></a>Mathjax Inline:</h3><pre><code>Simplie inline $a = b + c $.
+</code></pre><p>效果：</p>
+<p>Simplie inline $a = b + c $.</p>
+<h3 id="MathJax-Block"><a href="#MathJax-Block" class="headerlink" title="MathJax Block:"></a>MathJax Block:</h3><pre><code>$$\frac{\partial u}{\partial t}
+= h^2 \left( \frac{\partial^2 u}{\partial x^2} +
+\frac{\partial^2 u}{\partial y^2+
+\frac{\partial^2 u}{\partial z^2}\right)$$
+</code></pre><p>效果：</p>
+<p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
+<h3 id="Tag-inline"><a href="#Tag-inline" class="headerlink" title="Tag inline:"></a>Tag inline:</h3><pre><code>This equation {% math %}\cos 2\theta = \cos^2 \theta - \sin^2 \theta =  2 \cos^2 \theta - 1 {% endmath %} is inline.
+</code></pre><p>效果：</p>
+<p>This equation <span>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta =  2 \cos^2 \theta - 1$</span><!-- Has MathJax --> is inline.</p>
+<h3 id="Tag-Block"><a href="#Tag-Block" class="headerlink" title="Tag Block:"></a>Tag Block:</h3><pre><code>{% math %}
+    \begin{aligned}
+    \dot{x} & = \sigma(y-x) \\
+    \dot{y} & = \rho x - y - xz \\
+    \dot{z} & = -\beta z + xy
+    \end{aligned}
+    {% endmath %}
+</code></pre><p>效果：</p>
+<span>$$\begin{aligned}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{aligned}$$</span><!-- Has MathJax -->
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p><a href="https://github.com/akfish/hexo-math" target="_blank" rel="external">Github</a></p>
+<h2 id="Maxwell-equations-renew"><a href="#Maxwell-equations-renew" class="headerlink" title="Maxwell equations renew"></a>Maxwell equations renew</h2><span>$$\begin{eqnarray}
+\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
+\nabla\cdot\vec{B} &amp;=&amp; 0 \\
+\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \\
+\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}+\epsilon_0\frac{\partial\vec{E}}{\partial t})\\
+\end{eqnarray}$$</span><!-- Has MathJax -->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;利用&lt;strong&gt;MathJax&lt;/strong&gt;来渲染LaTeX数学公式.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Mathematics and Natural Sciences" scheme="http://yoursite.com/categories/Mathematics-and-Natural-Sciences/"/>
+    
+    
+      <category term="MathJax" scheme="http://yoursite.com/tags/MathJax/"/>
+    
+      <category term="hexo-math" scheme="http://yoursite.com/tags/hexo-math/"/>
     
   </entry>
   
