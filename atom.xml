@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>D-hang&#39;s blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-10-08T02:13:30.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Dwight Zhang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学公式测试</title>
+    <link href="http://yoursite.com/2016/10/20/Mathjax-examples/"/>
+    <id>http://yoursite.com/2016/10/20/Mathjax-examples/</id>
+    <published>2016-10-20T11:42:48.000Z</published>
+    <updated>2016-10-08T02:13:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用<strong>MathJax</strong>来渲染LaTeX数学公式.<br> <a id="more"></a></p>
+<h1 id="Maxwell-equations"><a href="#Maxwell-equations" class="headerlink" title="Maxwell equations"></a>Maxwell equations</h1><pre><code>$$
+\begin{eqnarray}
+\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
+\nabla\cdot\vec{B} &amp;=&amp; 0 \\
+\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \\
+\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}    +\epsilon_0\frac{\partial\vec{E}}{\partial t})\\
+\end{eqnarray}
+$$
+</code></pre><p>效果：</p>
+<p>$$<br>\begin{eqnarray}<br>\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \<br>\nabla\cdot\vec{B} &amp;=&amp; 0 \<br>\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \<br>\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}+\epsilon_0\frac{\partial\vec{E}}{\partial t})\<br>\end{eqnarray}<br>$$</p>
+<p>发现直接利用<font color="#DC143C"> \$\$..\$\$ </font>,<font color="#DC143C"> \\ </font>并不能分行。</p>
+<h1 id="Another-example"><a href="#Another-example" class="headerlink" title="Another example"></a>Another example</h1><pre><code>When \\( a \ne 0 \\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are:
+$$ 
+x = {-b \pm \sqrt{b^2-4ac} \over 2a} 
+$$
+</code></pre><p>效果：</p>
+<p>When \( a \ne 0 \), there are two solutions to \(ax^2 + bx + c = 0\) and they are:<br>$$<br>x = {-b \pm \sqrt{b^2-4ac} \over 2a}<br>$$</p>
+<h1 id="Hexo-MathJax插件"><a href="#Hexo-MathJax插件" class="headerlink" title="Hexo MathJax插件"></a>Hexo MathJax插件</h1><p>Hexo不支持数学公式，<a href="https://github.com/akfish" target="_blank" rel="external">akfish</a>开发了一个插件，实现：</p>
+<ul>
+<li>自动部署MathJax</li>
+<li>添加MathJax Tag</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>$ npm install hexo-math --save
+</code></pre><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>在blog文件夹中执行：</p>
+<pre><code>$ hexo math install
+</code></pre><p>在<font color="#DC143C">_config.yml</font>文件中添加： </p>
+<pre><code>math:
+  engine: &apos;mathjax&apos; # or &apos;katex&apos;
+  mathjax: 
+     src: custom_mathjax_source
+     config:
+      # MathJax config
+  katex:
+     css: custom_css_source
+     js: custom_js_source # not used    
+     config:
+     # KaTeX config
+</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>对于不含特殊符号的公式可以直接使用MathJax的inline math表达式；如果有特殊符号则需要人肉escape，如<font color="#DC143C"> \ </font>之类的特殊符号在LaTeX表达式中出现频率很高，这样很麻烦，使用tag能够省不少事。</p>
+<h3 id="Mathjax-Inline"><a href="#Mathjax-Inline" class="headerlink" title="Mathjax Inline:"></a>Mathjax Inline:</h3><pre><code>Simplie inline $a = b + c $.
+</code></pre><p>效果：</p>
+<p>Simplie inline $a = b + c $.</p>
+<h3 id="MathJax-Block"><a href="#MathJax-Block" class="headerlink" title="MathJax Block:"></a>MathJax Block:</h3><pre><code>$$\frac{\partial u}{\partial t}
+= h^2 \left( \frac{\partial^2 u}{\partial x^2} +
+\frac{\partial^2 u}{\partial y^2+
+\frac{\partial^2 u}{\partial z^2}\right)$$
+</code></pre><p>效果：</p>
+<p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
+<h3 id="Tag-inline"><a href="#Tag-inline" class="headerlink" title="Tag inline:"></a>Tag inline:</h3><pre><code>This equation {% math %}\cos 2\theta = \cos^2 \theta - \sin^2 \theta =  2 \cos^2 \theta - 1 {% endmath %} is inline.
+</code></pre><p>效果：</p>
+<p>This equation <span>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta =  2 \cos^2 \theta - 1$</span><!-- Has MathJax --> is inline.</p>
+<h3 id="Tag-Block"><a href="#Tag-Block" class="headerlink" title="Tag Block:"></a>Tag Block:</h3><pre><code>{% math %}
+    \begin{aligned}
+    \dot{x} & = \sigma(y-x) \\
+    \dot{y} & = \rho x - y - xz \\
+    \dot{z} & = -\beta z + xy
+    \end{aligned}
+    {% endmath %}
+</code></pre><p>效果：</p>
+<span>$$\begin{aligned}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{aligned}$$</span><!-- Has MathJax -->
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p><a href="https://github.com/akfish/hexo-math" target="_blank" rel="external">Github</a></p>
+<h2 id="Maxwell-equations-renew"><a href="#Maxwell-equations-renew" class="headerlink" title="Maxwell equations renew"></a>Maxwell equations renew</h2><span>$$\begin{eqnarray}
+\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
+\nabla\cdot\vec{B} &amp;=&amp; 0 \\
+\nabla\times\vec{E} &amp;=&amp; -\frac{\partial \vec{B}}{\partial t} \\
+\nabla\times\vec{B} &amp;=&amp; \mu_0(\vec{J}+\epsilon_0\frac{\partial\vec{E}}{\partial t})\\
+\end{eqnarray}$$</span><!-- Has MathJax -->]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;利用&lt;strong&gt;MathJax&lt;/strong&gt;来渲染LaTeX数学公式.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Mathematics and Natural Sciences" scheme="http://yoursite.com/categories/Mathematics-and-Natural-Sciences/"/>
+    
+    
+      <category term="MathJax" scheme="http://yoursite.com/tags/MathJax/"/>
+    
+      <category term="hexo-math" scheme="http://yoursite.com/tags/hexo-math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>致我们终将远离的子女(翻译分享)</title>
+    <link href="http://yoursite.com/2016/10/20/children-independece/"/>
+    <id>http://yoursite.com/2016/10/20/children-independece/</id>
+    <published>2016-10-20T11:42:48.000Z</published>
+    <updated>2016-10-08T02:13:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>很多父母都认为其实子女是自己的私有物，他们有权利干涉、甚至决定孩子的未来，但是他们不曾注意到，孩子其实是有自己的思想的，是有灵魂的，而他们也终有一天将离我们而远去…</p>
+<a id="more"></a>
+<p>一位美籍黎巴嫩阿拉伯诗人、作家、画家Khalil Gibran用他最优美的语言将这种感情写成了诗句…</p>
+<font color="#00008B" size="3"><br>Your children are not your children.<br></font>
+
+ <font face="黑体" size="3"><br>你的儿女，其实不是你的儿女。<br></font>
+
+<font color="#00008B" size="3"><br>They are the sons and daughters of Life’s longing for itself.<br></font>
+
+<font face="黑体" size="3"><br>他们是生命对于自身渴望而诞生的孩子。<br></font>
+
+<font color="#00008B" size="3"><br>They come through you but not from you.<br></font>
+
+<font face="黑体" size="3"><br>他们借助你来到这个世界，却非因你而来。<br></font>
+
+<font color="#00008B" size="3"><br>And though they are with you, yet they belong not to you.<br></font>
+
+<font face="黑体" size="3"><br>他们在你身旁，却并不属于你。<br></font>
+
+<font color="#00008B" size="3"><br>You may give them your love but not your thoughts,<br></font>
+
+<font face="黑体" size="3"><br>你可以给予他们的是你的爱，却不是你的想法，<br></font>
+
+<font color="#00008B" size="3"><br>For they have their own thoughts.<br></font>
+
+<font face="黑体" size="3"><br>因为他们有自己的思想。<br></font>
+
+<font color="#00008B" size="3"><br>You may house their bodies but not their souls,<br></font>
+
+<font face="黑体" size="3"><br>你可以庇护的是他们的身体，却不是他们的灵魂，<br></font>
+
+<font color="#00008B" size="3"><br>For their souls dwell in the house of tomorrow, which you cannot visit, not even in your dreams.<br></font>
+
+<font face="黑体" size="3"><br>因为他们的灵魂属于明天，属于你做梦也无法达到的明天。<br></font>
+
+<font color="#00008B" size="3"><br>You may strive to be like them, but seek no to make them like you<br></font>
+
+<font face="黑体" size="3"><br>你可以拼尽全力，变得像他们一样，却不要让他们变得和你一样，<br></font>
+
+<font color="#00008B" size="3"><br>For life goes not backward nor tarries with yesterday.<br></font>
+
+<font face="黑体" size="3"><br>因为生命不会后退，也不在过去停留。<br></font>
+
+<font color="#00008B" size="3"><br>You are the bows from which your children as living arrows are sent forth.<br></font>
+
+<font face="黑体" size="3"><br>你是弓，儿女是从你那里射出的箭。<br></font>
+
+<font color="#00008B" size="3"><br>The archer sees the mark uponn the path of the infinite.<br></font>
+
+<font face="黑体" size="3"><br>弓箭手望着未来之路上的箭靶，<br></font>
+
+<font color="#00008B" size="3"><br>and He bends you with his might that his arrows may go swift and far.<br></font>
+
+<font face="黑体" size="3"><br>他用尽力气将你拉开，使他的箭射得又快又远。<br></font>
+
+<font color="#00008B" size="3"><br>Let your bending in the archer’s hand be of gladness,<br></font>
+
+<font face="黑体" size="3"><br>怀着快乐的心情，在弓箭手的手中弯曲吧，<br></font>
+
+<font color="#00008B" size="3"><br>For even as he loves the arrow that files, so he loves also the bow that is stable.<br></font>
+
+<font face="黑体" size="3"><br>因为他爱一路飞翔的箭，也爱无比稳定的弓。<br></font>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很多父母都认为其实子女是自己的私有物，他们有权利干涉、甚至决定孩子的未来，但是他们不曾注意到，孩子其实是有自己的思想的，是有灵魂的，而他们也终有一天将离我们而远去…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Literature and Social Sciences" scheme="http://yoursite.com/categories/Literature-and-Social-Sciences/"/>
+    
+    
+      <category term="blogs" scheme="http://yoursite.com/tags/blogs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每次都有新感觉</title>
+    <link href="http://yoursite.com/2016/10/05/my-new-post/"/>
+    <id>http://yoursite.com/2016/10/05/my-new-post/</id>
+    <published>2016-10-05T02:12:23.000Z</published>
+    <updated>2016-10-08T02:11:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本着学英语练习写作的目的建立本博客,建立过程参看<a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">Chillax’s Blog</a><br> <a id="more"></a><br>还是要附一首英语诗才配得上吧：</p>
+<h2 id="The-Moon-Song"><a href="#The-Moon-Song" class="headerlink" title="The Moon Song"></a>The Moon Song</h2><p>I’m lying on the moon<br>My dear, I’ll be there soon<br>It’s a quiet starry place<br>Time’s we’re swallowed up<br>In space we’re here a million miles away<br>There’s things I wish I knew<br>There’s no thing I’d keep from you<br>It’s a dark and shing place<br>But with you my dear<br>I’m safe and we’re a million miles away</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本着学英语练习写作的目的建立本博客,建立过程参看&lt;a href=&quot;http://opiece.me/2015/04/09/hexo-guide/&quot;&gt;Chillax’s Blog&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
+    
+    
+      <category term="blogs" scheme="http://yoursite.com/tags/blogs/"/>
+    
+  </entry>
+  
+</feed>
