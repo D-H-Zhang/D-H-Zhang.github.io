@@ -61,7 +61,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -77,12 +77,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="D-hang's blog">
-<meta property="og:url" content="http://yoursite.com/tags/hexo-math/index.html">
+<meta name="description" content="将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看JinyaoLi’s Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将HEXO从windows迁移到Macbook">
+<meta property="og:url" content="http://yoursite.com/2016/10/20/change_pc_to_mac/index.html">
 <meta property="og:site_name" content="D-hang's blog">
+<meta property="og:description" content="将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看JinyaoLi’s Blog">
+<meta property="og:updated_time" content="2016-10-20T15:16:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D-hang's blog">
+<meta name="twitter:title" content="将HEXO从windows迁移到Macbook">
+<meta name="twitter:description" content="将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看JinyaoLi’s Blog">
 
 
 
@@ -103,9 +107,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/hexo-math/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/20/change_pc_to_mac/"/>
 
-  <title> 标签: hexo-math | D-hang's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 将HEXO从windows迁移到Macbook | D-hang's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,46 +238,194 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        hexo-math
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                将HEXO从windows迁移到Macbook
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-20T00:00:00+08:00" content="2016-10-20">
+              2016-10-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Computer-Skills/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Skills</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/20/change_pc_to_mac/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/change_pc_to_mac/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看<a href="http://www.cnblogs.com/JinyaoLi/p/4672376.html" target="_blank" rel="external">JinyaoLi’s Blog</a><br> <a id="more"></a><br>本文前提：</p>
+<ul>
+<li>Mac系统安装了Node.js和Git</li>
+<li>本文中所有命令均在terminal中执行</li>
+</ul>
+<h1 id="拷贝需要的文件"><a href="#拷贝需要的文件" class="headerlink" title="拷贝需要的文件"></a>拷贝需要的文件</h1><p>  需要拷贝一下文件夹：</p>
+<ul>
+<li>hexo/source</li>
+<li>hexo/themes/你的主题文件夹</li>
+</ul>
+<p>和以下文件:</p>
+<ul>
+<li>hexo/_config.yml</li>
+<li>packge.json</li>
+</ul>
+<h1 id="在Macbook部署新的Hexo"><a href="#在Macbook部署新的Hexo" class="headerlink" title="在Macbook部署新的Hexo"></a>在Macbook部署新的Hexo</h1><ul>
+<li>1运行 <code>npm install hexo -g</code> , <code>npm install hexo --save</code>。</li>
+<li>2在你想要部署hexo的文件夹运行命令: <code>hexo init</code>,创建一个新的Hexo目录。</li>
+<li>3将拷贝的packge.json文件复制到新的hexo目录下,覆盖原来的文件。</li>
+<li>4执行 <code>npm install</code> 安装依赖包。</li>
+<li>5拷贝剩下的两个文件夹和_config.yml到对应位置。</li>
+<li>6运行 <code>hexo g</code> 生成博客。</li>
+<li>7运行 <code>hexo s -o</code> 查看你的博客。</li>
+</ul>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/10/06/Mathjax-examples/" itemprop="url">
-              
-                <span itemprop="name">数学公式测试</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-06T00:00:00+08:00"
-              content="2016-10-06" >
-          10-06
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/07/children-independece/" rel="next" title="致我们终将远离的子女(翻译分享)">
+                <i class="fa fa-chevron-left"></i> 致我们终将远离的子女(翻译分享)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -281,6 +433,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/20/change_pc_to_mac/"
+           data-title="将HEXO从windows迁移到Macbook" data-url="http://yoursite.com/2016/10/20/change_pc_to_mac/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -300,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -351,6 +520,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#拷贝需要的文件"><span class="nav-number">1.</span> <span class="nav-text">拷贝需要的文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在Macbook部署新的Hexo"><span class="nav-number">2.</span> <span class="nav-text">在Macbook部署新的Hexo</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -454,6 +634,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

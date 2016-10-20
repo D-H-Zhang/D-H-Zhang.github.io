@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-20T12:14:56.000Z</updated>
+  <updated>2016-10-20T15:16:49.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将HEXO从windows迁移到Macbook</title>
+    <link href="http://yoursite.com/2016/10/20/change_pc_to_mac/"/>
+    <id>http://yoursite.com/2016/10/20/change_pc_to_mac/</id>
+    <published>2016-10-19T16:00:00.000Z</published>
+    <updated>2016-10-20T15:16:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看<a href="http://www.cnblogs.com/JinyaoLi/p/4672376.html" target="_blank" rel="external">JinyaoLi’s Blog</a><br> <a id="more"></a><br>本文前提：</p>
+<ul>
+<li>Mac系统安装了Node.js和Git</li>
+<li>本文中所有命令均在terminal中执行</li>
+</ul>
+<h1 id="拷贝需要的文件"><a href="#拷贝需要的文件" class="headerlink" title="拷贝需要的文件"></a>拷贝需要的文件</h1><p>  需要拷贝一下文件夹：</p>
+<ul>
+<li>hexo/source</li>
+<li>hexo/themes/你的主题文件夹</li>
+</ul>
+<p>和以下文件:</p>
+<ul>
+<li>hexo/_config.yml</li>
+<li>packge.json</li>
+</ul>
+<h1 id="在Macbook部署新的Hexo"><a href="#在Macbook部署新的Hexo" class="headerlink" title="在Macbook部署新的Hexo"></a>在Macbook部署新的Hexo</h1><ul>
+<li>1运行 <code>npm install hexo -g</code> , <code>npm install hexo --save</code>。</li>
+<li>2在你想要部署hexo的文件夹运行命令: <code>hexo init</code>,创建一个新的Hexo目录。</li>
+<li>3将拷贝的packge.json文件复制到新的hexo目录下,覆盖原来的文件。</li>
+<li>4执行 <code>npm install</code> 安装依赖包。</li>
+<li>5拷贝剩下的两个文件夹和_config.yml到对应位置。</li>
+<li>6运行 <code>hexo g</code> 生成博客。</li>
+<li>7运行 <code>hexo s -o</code> 查看你的博客。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看&lt;a href=&quot;http://www.cnblogs.com/JinyaoLi/p/4672376.html&quot;&gt;JinyaoLi’s Blog&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Computer Skills" scheme="http://yoursite.com/categories/Computer-Skills/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>致我们终将远离的子女(翻译分享)</title>
@@ -104,7 +150,7 @@
     <link href="http://yoursite.com/2016/10/06/Mathjax-examples/"/>
     <id>http://yoursite.com/2016/10/06/Mathjax-examples/</id>
     <published>2016-10-05T16:00:00.000Z</published>
-    <updated>2016-10-20T12:14:40.000Z</updated>
+    <updated>2016-10-20T14:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>利用<strong>MathJax</strong>来渲染LaTeX数学公式.<br> <a id="more"></a></p>
 <h1 id="Maxwell-equations"><a href="#Maxwell-equations" class="headerlink" title="Maxwell equations"></a>Maxwell equations</h1><pre><code>$$
@@ -185,7 +231,7 @@ $$
     
     </summary>
     
-      <category term="Mathematics and Natural Sciences" scheme="http://yoursite.com/categories/Mathematics-and-Natural-Sciences/"/>
+      <category term="Algorithm and Computer Science" scheme="http://yoursite.com/categories/Algorithm-and-Computer-Science/"/>
     
     
       <category term="MathJax" scheme="http://yoursite.com/tags/MathJax/"/>
