@@ -41,6 +41,35 @@
   </entry>
   
   <entry>
+    <title>NEXT主题显示问题</title>
+    <link href="http://yoursite.com/2016/11/07/hexo_change_vendors_to_lib/"/>
+    <id>http://yoursite.com/2016/11/07/hexo_change_vendors_to_lib/</id>
+    <published>2016-11-06T16:00:00.000Z</published>
+    <updated>2016-11-07T08:25:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先修改source/vendors为source/lib，然后修改_config.yml，将<em>_internal:vendors</em>修改为<em>_internal:lib</em>然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。<br>主要集中在这几个文件中:</p>
+<ol>
+<li>Hexo\themes\next.bowerrc </li>
+<li>Hexo\themes\next.gitignore </li>
+<li>Hexo\themes\next.javascript_ignore </li>
+<li>Hexo\themes\next\bower.json 。<br>修改完毕后，刷新重新g一遍就ok啦。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先修改source/vendors为source/lib，然后修改_config.yml，将&lt;em&gt;_internal:vendors&lt;/em&gt;修改为&lt;em&gt;_internal:lib&lt;/em&gt;然后修改next底下所有引用source/vendors路径为source/l
+    
+    </summary>
+    
+      <category term="Computer Skills" scheme="http://yoursite.com/categories/Computer-Skills/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>将HEXO从windows迁移到Macbook</title>
     <link href="http://yoursite.com/2016/10/20/change_pc_to_mac/"/>
     <id>http://yoursite.com/2016/10/20/change_pc_to_mac/</id>
@@ -76,35 +105,6 @@
     <summary type="html">
     
       &lt;p&gt;将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看&lt;a href=&quot;http://www.cnblogs.com/JinyaoLi/p/4672376.html&quot;&gt;JinyaoLi’s Blog&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Computer Skills" scheme="http://yoursite.com/categories/Computer-Skills/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NEXT主题显示问题</title>
-    <link href="http://yoursite.com/2016/10/20/hexo_change_vendors_to_lib/"/>
-    <id>http://yoursite.com/2016/10/20/hexo_change_vendors_to_lib/</id>
-    <published>2016-10-19T16:00:00.000Z</published>
-    <updated>2016-11-07T08:23:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先修改source/vendors为source/lib，然后修改_config.yml，将<em>_internal:vendors</em>修改为<em>_internal:lib</em>然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。<br>主要集中在这几个文件中:</p>
-<ol>
-<li>Hexo\themes\next.bowerrc </li>
-<li>Hexo\themes\next.gitignore </li>
-<li>Hexo\themes\next.javascript_ignore </li>
-<li>Hexo\themes\next\bower.json 。<br>修改完毕后，刷新重新g一遍就ok啦。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先修改source/vendors为source/lib，然后修改_config.yml，将&lt;em&gt;_internal:vendors&lt;/em&gt;修改为&lt;em&gt;_internal:lib&lt;/em&gt;然后修改next底下所有引用source/vendors路径为source/l
     
     </summary>
     
