@@ -87,6 +87,35 @@
   </entry>
   
   <entry>
+    <title>NEXT主题显示问题</title>
+    <link href="http://yoursite.com/2016/10/20/hexo_change_vendors_to_lib/"/>
+    <id>http://yoursite.com/2016/10/20/hexo_change_vendors_to_lib/</id>
+    <published>2016-10-19T16:00:00.000Z</published>
+    <updated>2016-11-07T08:23:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先修改source/vendors为source/lib，然后修改_config.yml，将<em>_internal:vendors</em>修改为<em>_internal:lib</em>然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。<br>主要集中在这几个文件中:</p>
+<ol>
+<li>Hexo\themes\next.bowerrc </li>
+<li>Hexo\themes\next.gitignore </li>
+<li>Hexo\themes\next.javascript_ignore </li>
+<li>Hexo\themes\next\bower.json 。<br>修改完毕后，刷新重新g一遍就ok啦。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先修改source/vendors为source/lib，然后修改_config.yml，将&lt;em&gt;_internal:vendors&lt;/em&gt;修改为&lt;em&gt;_internal:lib&lt;/em&gt;然后修改next底下所有引用source/vendors路径为source/l
+    
+    </summary>
+    
+      <category term="Computer Skills" scheme="http://yoursite.com/categories/Computer-Skills/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>致我们终将远离的子女(翻译分享)</title>
     <link href="http://yoursite.com/2016/10/07/children-independece/"/>
     <id>http://yoursite.com/2016/10/07/children-independece/</id>
