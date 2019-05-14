@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>D-hang&#39;s blog</title>
+  <title>清水无痕</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-07T07:16:36.000Z</updated>
+  <updated>2016-11-07T08:25:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,31 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>MODEL ESSAY</title>
-    <link href="http://yoursite.com/2016/11/07/english-writing01/"/>
-    <id>http://yoursite.com/2016/11/07/english-writing01/</id>
-    <published>2016-11-06T16:00:00.000Z</published>
-    <updated>2016-11-07T07:16:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Learn model essays by heart<br> <a id="more"></a></p>
-<h1 id="Writing-task-2-for-IELTS"><a href="#Writing-task-2-for-IELTS" class="headerlink" title="Writing task 2 for IELTS:"></a>Writing task 2 for IELTS:</h1><p>You should spend about 40 minutes on this task.<br>Write about the following topic:<br><em>Some people hold that student should study by themselves instead of in a group. What is your opinion?</em><br>Give reasons for your answer and include any relevant examples from your own knowledge and experience.Write at least 250 words.</p>
-<h1 id="Model-essay"><a href="#Model-essay" class="headerlink" title="Model essay"></a>Model essay</h1><p>In most countries in the world, goverments require children to attend schools where professional teachers are responsible for educating the children using an approved curriculum. However, a significant number of parents believe that it is much better for their children to be educated at home. This essay will examine the question of home schooling ang discuss which is the best oprion for the child.<br>Most of the parents who choose home schooling are unhappy with the quality or depth of education offered in the schools. One social factor influencing their deision is that parents worry that their children will suffer from bullying or be forced into antisocial behavior through peer pressure. They believe that the good behavior they have taught the child will be lost in school. Anothor reason is the concern over the quality of schooling avaiable. Schools frequently have large classes. They are often under-funded, and staffed by teachers withour sufficient knowledge of their subjects. Other parents may disagree with the aims of the school curriculum, preferring for academic, social or cultural reasons to keep their children separate. Finally, some children with special needs may need particular parental care.<br>However, there are many arguments in favor of sending children to conventional schools and receiving education with other students. The first is that group education can increase children’s communication skills. In shcool, Children will interact with each other and develop social skills eventually. At the same time, children will learn to function outside the family. They will not be dependent on their parents for their educational, emotional and social needs. Inaddition to that, children will find it easire to integrate when they finishh school, as they will, when they start work or college.<br>Overall, while many parents work hard to teach their children at home, conventional schools are still the right choice for most children. Group education is not perfect, but it seems to be a proven way of preparing our children for the real world.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Learn model essays by heart&lt;br&gt;
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-      <category term="Writing" scheme="http://yoursite.com/tags/Writing/"/>
-    
-  </entry>
   
   <entry>
     <title>NEXT主题显示问题</title>
@@ -66,6 +41,31 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MODEL ESSAY</title>
+    <link href="http://yoursite.com/2016/11/07/english-writing01/"/>
+    <id>http://yoursite.com/2016/11/07/english-writing01/</id>
+    <published>2016-11-06T16:00:00.000Z</published>
+    <updated>2016-11-07T07:16:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Learn model essays by heart<br> <a id="more"></a></p>
+<h1 id="Writing-task-2-for-IELTS"><a href="#Writing-task-2-for-IELTS" class="headerlink" title="Writing task 2 for IELTS:"></a>Writing task 2 for IELTS:</h1><p>You should spend about 40 minutes on this task.<br>Write about the following topic:<br><em>Some people hold that student should study by themselves instead of in a group. What is your opinion?</em><br>Give reasons for your answer and include any relevant examples from your own knowledge and experience.Write at least 250 words.</p>
+<h1 id="Model-essay"><a href="#Model-essay" class="headerlink" title="Model essay"></a>Model essay</h1><p>In most countries in the world, goverments require children to attend schools where professional teachers are responsible for educating the children using an approved curriculum. However, a significant number of parents believe that it is much better for their children to be educated at home. This essay will examine the question of home schooling ang discuss which is the best oprion for the child.<br>Most of the parents who choose home schooling are unhappy with the quality or depth of education offered in the schools. One social factor influencing their deision is that parents worry that their children will suffer from bullying or be forced into antisocial behavior through peer pressure. They believe that the good behavior they have taught the child will be lost in school. Anothor reason is the concern over the quality of schooling avaiable. Schools frequently have large classes. They are often under-funded, and staffed by teachers withour sufficient knowledge of their subjects. Other parents may disagree with the aims of the school curriculum, preferring for academic, social or cultural reasons to keep their children separate. Finally, some children with special needs may need particular parental care.<br>However, there are many arguments in favor of sending children to conventional schools and receiving education with other students. The first is that group education can increase children’s communication skills. In shcool, Children will interact with each other and develop social skills eventually. At the same time, children will learn to function outside the family. They will not be dependent on their parents for their educational, emotional and social needs. Inaddition to that, children will find it easire to integrate when they finishh school, as they will, when they start work or college.<br>Overall, while many parents work hard to teach their children at home, conventional schools are still the right choice for most children. Group education is not perfect, but it seems to be a proven way of preparing our children for the real world.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Learn model essays by heart&lt;br&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://yoursite.com/categories/English/"/>
+    
+    
+      <category term="Writing" scheme="http://yoursite.com/tags/Writing/"/>
     
   </entry>
   
