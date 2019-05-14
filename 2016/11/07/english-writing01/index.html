@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next muse use-motion">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -61,7 +61,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Writing," />
 
 
 
@@ -77,25 +77,25 @@
 
 
 
-<meta name="description" content="将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看JinyaoLi’s Blog">
-<meta name="keywords" content="hexo">
+<meta name="description" content="Learn model essays by heart">
+<meta name="keywords" content="Writing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将HEXO从windows迁移到Macbook">
-<meta property="og:url" content="http://yoursite.com/2016/10/20/change_pc_to_mac/index.html">
+<meta property="og:title" content="MODEL ESSAY">
+<meta property="og:url" content="http://yoursite.com/2016/11/07/english-writing01/index.html">
 <meta property="og:site_name" content="D-hang&#39;s blog">
-<meta property="og:description" content="将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看JinyaoLi’s Blog">
+<meta property="og:description" content="Learn model essays by heart">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-11-03T11:12:34.000Z">
+<meta property="og:updated_time" content="2016-11-07T07:16:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将HEXO从windows迁移到Macbook">
-<meta name="twitter:description" content="将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看JinyaoLi’s Blog">
+<meta name="twitter:title" content="MODEL ESSAY">
+<meta name="twitter:description" content="Learn model essays by heart">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Muse',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -109,9 +109,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/20/change_pc_to_mac/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/07/english-writing01/"/>
 
-  <title> 将HEXO从windows迁移到Macbook | D-hang's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> MODEL ESSAY | D-hang's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -223,6 +223,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-search">
+          <a href="/search" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-search"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -261,7 +271,7 @@
             
             
               
-                将HEXO从windows迁移到Macbook
+                MODEL ESSAY
               
             
           </h1>
@@ -273,8 +283,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-20T00:00:00+08:00" content="2016-10-20">
-              2016-10-20
+            <time itemprop="dateCreated" datetime="2016-11-07T00:00:00+08:00" content="2016-11-07">
+              2016-11-07
             </time>
           </span>
 
@@ -287,8 +297,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Computer-Skills/" itemprop="url" rel="index">
-                    <span itemprop="name">Computer Skills</span>
+                  <a href="/categories/English/" itemprop="url" rel="index">
+                    <span itemprop="name">English</span>
                   </a>
                 </span>
 
@@ -303,8 +313,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/20/change_pc_to_mac/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/change_pc_to_mac/" itemprop="commentsCount"></span>
+                <a href="/2016/11/07/english-writing01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/07/english-writing01/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -327,30 +337,9 @@
       
 
       
-        <p>将hexo的主题和source文件拷贝过来,其他内容手动配置,类此此过程参看<a href="http://www.cnblogs.com/JinyaoLi/p/4672376.html" target="_blank" rel="external">JinyaoLi’s Blog</a><br> <a id="more"></a><br>本文前提：</p>
-<ul>
-<li>Mac系统安装了Node.js和Git</li>
-<li>本文中所有命令均在terminal中执行</li>
-</ul>
-<h1 id="拷贝需要的文件"><a href="#拷贝需要的文件" class="headerlink" title="拷贝需要的文件"></a>拷贝需要的文件</h1><p>  需要拷贝一下文件夹：</p>
-<ul>
-<li>hexo/source</li>
-<li>hexo/themes/你的主题文件夹</li>
-</ul>
-<p>和以下文件:</p>
-<ul>
-<li>hexo/_config.yml</li>
-<li>packge.json</li>
-</ul>
-<h1 id="在Macbook部署新的Hexo"><a href="#在Macbook部署新的Hexo" class="headerlink" title="在Macbook部署新的Hexo"></a>在Macbook部署新的Hexo</h1><ul>
-<li>1运行 <code>npm install hexo -g</code> , <code>npm install hexo --save</code>。</li>
-<li>2在你想要部署hexo的文件夹运行命令: <code>hexo init</code>,创建一个新的Hexo目录。</li>
-<li>3将拷贝的packge.json文件复制到新的hexo目录下,覆盖原来的文件。</li>
-<li>4执行 <code>npm install</code> 安装依赖包。</li>
-<li>5拷贝剩下的两个文件夹和_config.yml到对应位置。</li>
-<li>6运行 <code>hexo g</code> 生成博客。</li>
-<li>7运行 <code>hexo s -o</code> 查看你的博客。</li>
-</ul>
+        <p>Learn model essays by heart<br> <a id="more"></a></p>
+<h1 id="Writing-task-2-for-IELTS"><a href="#Writing-task-2-for-IELTS" class="headerlink" title="Writing task 2 for IELTS:"></a>Writing task 2 for IELTS:</h1><p>You should spend about 40 minutes on this task.<br>Write about the following topic:<br><em>Some people hold that student should study by themselves instead of in a group. What is your opinion?</em><br>Give reasons for your answer and include any relevant examples from your own knowledge and experience.Write at least 250 words.</p>
+<h1 id="Model-essay"><a href="#Model-essay" class="headerlink" title="Model essay"></a>Model essay</h1><p>In most countries in the world, goverments require children to attend schools where professional teachers are responsible for educating the children using an approved curriculum. However, a significant number of parents believe that it is much better for their children to be educated at home. This essay will examine the question of home schooling ang discuss which is the best oprion for the child.<br>Most of the parents who choose home schooling are unhappy with the quality or depth of education offered in the schools. One social factor influencing their deision is that parents worry that their children will suffer from bullying or be forced into antisocial behavior through peer pressure. They believe that the good behavior they have taught the child will be lost in school. Anothor reason is the concern over the quality of schooling avaiable. Schools frequently have large classes. They are often under-funded, and staffed by teachers withour sufficient knowledge of their subjects. Other parents may disagree with the aims of the school curriculum, preferring for academic, social or cultural reasons to keep their children separate. Finally, some children with special needs may need particular parental care.<br>However, there are many arguments in favor of sending children to conventional schools and receiving education with other students. The first is that group education can increase children’s communication skills. In shcool, Children will interact with each other and develop social skills eventually. At the same time, children will learn to function outside the family. They will not be dependent on their parents for their educational, emotional and social needs. Inaddition to that, children will find it easire to integrate when they finishh school, as they will, when they start work or college.<br>Overall, while many parents work hard to teach their children at home, conventional schools are still the right choice for most children. Group education is not perfect, but it seems to be a proven way of preparing our children for the real world.</p>
 
       
     </div>
@@ -373,7 +362,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/Writing/" rel="tag">#Writing</a>
           
         </div>
       
@@ -382,17 +371,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/07/children-independece/" rel="next" title="致我们终将远离的子女(翻译分享)">
-                <i class="fa fa-chevron-left"></i> 致我们终将远离的子女(翻译分享)
+              <a href="/2016/11/07/hexo-change-vendors-to-lib/" rel="next" title="NEXT主题显示问题">
+                <i class="fa fa-chevron-left"></i> NEXT主题显示问题
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/07/hexo_change_vendors_to_lib/" rel="prev" title="NEXT主题显示问题">
-                NEXT主题显示问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -441,8 +426,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/20/change_pc_to_mac/"
-           data-title="将HEXO从windows迁移到Macbook" data-url="http://yoursite.com/2016/10/20/change_pc_to_mac/">
+      <div class="ds-thread" data-thread-key="2016/11/07/english-writing01/"
+           data-title="MODEL ESSAY" data-url="http://yoursite.com/2016/11/07/english-writing01/">
       </div>
     
   </div>
@@ -533,7 +518,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#拷贝需要的文件"><span class="nav-number">1.</span> <span class="nav-text">拷贝需要的文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在Macbook部署新的Hexo"><span class="nav-number">2.</span> <span class="nav-text">在Macbook部署新的Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Writing-task-2-for-IELTS"><span class="nav-number">1.</span> <span class="nav-text">Writing task 2 for IELTS:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Model-essay"><span class="nav-number">2.</span> <span class="nav-text">Model essay</span></a></li></ol></div>
             
           </div>
         </section>
@@ -566,7 +551,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Muse
   </a>
 </div>
 
@@ -631,13 +616,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>

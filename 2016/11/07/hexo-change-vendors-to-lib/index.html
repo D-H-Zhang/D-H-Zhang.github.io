@@ -61,7 +61,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -77,13 +77,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="D-hang&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/categories/English/index.html">
+<meta name="description" content="首先修改source/vendors为source/lib，然后修改_config.yml，将_internal:vendors修改为_internal:lib然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。主要集中在这几个文件中:  Hexo\themes\next.bowerrc  Hexo\themes\next.gitig">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NEXT主题显示问题">
+<meta property="og:url" content="http://yoursite.com/2016/11/07/hexo-change-vendors-to-lib/index.html">
 <meta property="og:site_name" content="D-hang&#39;s blog">
+<meta property="og:description" content="首先修改source/vendors为source/lib，然后修改_config.yml，将_internal:vendors修改为_internal:lib然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。主要集中在这几个文件中:  Hexo\themes\next.bowerrc  Hexo\themes\next.gitig">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-11-07T08:25:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D-hang&#39;s blog">
+<meta name="twitter:title" content="NEXT主题显示问题">
+<meta name="twitter:description" content="首先修改source/vendors为source/lib，然后修改_config.yml，将_internal:vendors修改为_internal:lib然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。主要集中在这几个文件中:  Hexo\themes\next.bowerrc  Hexo\themes\next.gitig">
 
 
 
@@ -104,9 +109,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/English/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/07/hexo-change-vendors-to-lib/"/>
 
-  <title> 分类: English | D-hang's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> NEXT主题显示问题 | D-hang's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +142,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,47 +250,181 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        English
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                NEXT主题显示问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-07T00:00:00+08:00" content="2016-11-07">
+              2016-11-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Computer-Skills/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Skills</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/07/hexo-change-vendors-to-lib/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/07/hexo-change-vendors-to-lib/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>首先修改source/vendors为source/lib，然后修改_config.yml，将<em>_internal:vendors</em>修改为<em>_internal:lib</em>然后修改next底下所有引用source/vendors路径为source/lib。这些地方可以通过文件查找找出来。<br>主要集中在这几个文件中:</p>
+<ol>
+<li>Hexo\themes\next.bowerrc </li>
+<li>Hexo\themes\next.gitignore </li>
+<li>Hexo\themes\next.javascript_ignore </li>
+<li>Hexo\themes\next\bower.json 。<br>修改完毕后，刷新重新g一遍就ok啦。</li>
+</ol>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/11/07/english-writing01/" itemprop="url">
-              
-                <span itemprop="name">MODEL ESSAY</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-07T00:00:00+08:00"
-              content="2016-11-07" >
-          11-07
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/20/change-pc-to-mac/" rel="next" title="将HEXO从windows迁移到Macbook">
+                <i class="fa fa-chevron-left"></i> 将HEXO从windows迁移到Macbook
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/07/english-writing01/" rel="prev" title="MODEL ESSAY">
+                MODEL ESSAY <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
+      
+    </div>
+  </div>
 
 
           </div>
@@ -293,6 +432,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/07/hexo-change-vendors-to-lib/"
+           data-title="NEXT主题显示问题" data-url="http://yoursite.com/2016/11/07/hexo-change-vendors-to-lib/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -312,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -363,6 +519,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -459,6 +626,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
